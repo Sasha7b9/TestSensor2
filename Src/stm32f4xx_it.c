@@ -168,7 +168,7 @@ void OTG_HS_IRQHandler(void)
   */
 void DMA2_Stream3_IRQHandler(void)
 {
-  BSP_SD_DMA_Rx_IRQHandler();
+//  BSP_SD_DMA_Rx_IRQHandler();
 }
 
 /**
@@ -178,7 +178,7 @@ void DMA2_Stream3_IRQHandler(void)
   */
 void DMA2_Stream6_IRQHandler(void)
 {
-  BSP_SD_DMA_Tx_IRQHandler();
+//  BSP_SD_DMA_Tx_IRQHandler();
 }
 
 /**
@@ -188,7 +188,7 @@ void DMA2_Stream6_IRQHandler(void)
   */
 void SDIO_IRQHandler(void)
 {
-  BSP_SD_IRQHandler();
+//  BSP_SD_IRQHandler();
 }
 
 /**
@@ -208,7 +208,7 @@ void EXTI9_5_IRQHandler(void)
   */
 void EXTI15_10_IRQHandler(void)
 {
-  HAL_GPIO_EXTI_IRQHandler(KEY_BUTTON_PIN);
+//  HAL_GPIO_EXTI_IRQHandler(KEY_BUTTON_PIN);
 }
 
 /**

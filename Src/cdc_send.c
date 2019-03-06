@@ -1,48 +1,3 @@
-/**
-  ******************************************************************************
-  * @file    USB_Host/CDC_Standalone/Src/cdc_send.c 
-  * @author  MCD Application Team
-  * @brief   CDC Send state machine
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2017 STMicroelectronics International N.V. 
-  * All rights reserved.</center></h2>
-  *
-  * Redistribution and use in source and binary forms, with or without 
-  * modification, are permitted, provided that the following conditions are met:
-  *
-  * 1. Redistribution of source code must retain the above copyright notice, 
-  *    this list of conditions and the following disclaimer.
-  * 2. Redistributions in binary form must reproduce the above copyright notice,
-  *    this list of conditions and the following disclaimer in the documentation
-  *    and/or other materials provided with the distribution.
-  * 3. Neither the name of STMicroelectronics nor the names of other 
-  *    contributors to this software may be used to endorse or promote products 
-  *    derived from this software without specific written permission.
-  * 4. This software, including modifications and/or derivative works of this 
-  *    software, must execute solely and exclusively on microcontroller or
-  *    microprocessor devices manufactured by or for STMicroelectronics.
-  * 5. Redistribution and use of this software other than as permitted under 
-  *    this license is void and will automatically terminate your rights under 
-  *    this license. 
-  *
-  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
-  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
-  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-  * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
-  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
-  * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
-  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
-  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
-  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
-  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-  *
-  ******************************************************************************
-  */
-/* Includes ------------------------------------------------------------------ */
 #include "main.h"
 
 /* Private define ------------------------------------------------------------ */
@@ -66,7 +21,7 @@ uint8_t BLANK_LINE[] =
 
 /* Private macro ------------------------------------------------------------- */
 /* Private variables --------------------------------------------------------- */
-FIL MyFile = { 0 };
+//FIL MyFile = { 0 };
 uint8_t FilePos = 0;
 uint8_t FileOffset = 0;
 uint8_t PrevPos = 0;
@@ -79,7 +34,7 @@ uint32_t use_file = 0;
 static void CDC_SendFile(uint8_t fileidx);
 static void ReturnFromSendMenu(void);
 static void CDC_ShowFiles(uint8_t offset, uint8_t select);
-static void SendFileMenu_Init(void);
+//static void SendFileMenu_Init(void);
 
 /**
   * @brief  Handles CDC Send Menu. 
@@ -114,30 +69,30 @@ void CDC_Handle_Send_Menu(void)
           {
           case 0:
             memset(CDC_TX_Buffer, 0x5A, TX_BUFF_SIZE);
-            LCD_DbgLog("Sending data ...\n");
+//            LCD_DbgLog("Sending data ...\n");
             USBH_CDC_Transmit(&hUSBHost, CDC_TX_Buffer, TX_BUFF_SIZE);
             use_file = 0;
             break;
 
           case 1:
-            if (FileList.ptr > 0)
-            {
-              SendFileMenu_Init();
-              if (FilePos >= 9)
-              {
-                CDC_ShowFiles(FileOffset, 9);
-              }
-
-              else
-              {
-                CDC_ShowFiles(FileOffset, FilePos);
-              }
-              CdcDemo.Send_state = CDC_SEND_SELECT_FILE;
-            }
-            else
-            {
-              LCD_ErrLog("No file on the microSD\n");
-            }
+//            if (FileList.ptr > 0)
+//            {
+//              SendFileMenu_Init();
+//              if (FilePos >= 9)
+//              {
+//                CDC_ShowFiles(FileOffset, 9);
+//              }
+//
+//              else
+//              {
+//                CDC_ShowFiles(FileOffset, FilePos);
+//              }
+//              CdcDemo.Send_state = CDC_SEND_SELECT_FILE;
+//            }
+//            else
+//            {
+//              LCD_ErrLog("No file on the microSD\n");
+//            }
             break;
 
           case 2:              /* Return */
@@ -167,11 +122,11 @@ void CDC_Handle_Send_Menu(void)
       break;
 
     case CDC_SEND_TRANSMIT_FILE:
-      LCD_DbgLog("Sending file ...\n");
+//      LCD_DbgLog("Sending file ...\n");
       use_file = 1;
       CDC_SendFile(FilePos);
       CDC_ChangeSelectMode(CDC_SELECT_MENU);
-      LCD_LOG_UpdateDisplay();
+//      LCD_LOG_UpdateDisplay();
       CdcDemo.Send_state = CDC_SEND_WAIT;
       break;
 
@@ -210,9 +165,10 @@ void CDC_Handle_Send_Menu(void)
   * @param  state: Joystick state
   * @retval None
   */
+/*
 void CDC_SendFile_ProbeKey(JOYState_TypeDef state)
 {
-  /* Handle File List Selection */
+  // * Handle File List Selection *
   if ((state == JOY_UP) && (FilePos > 0))
   {
     FilePos--;
@@ -226,6 +182,7 @@ void CDC_SendFile_ProbeKey(JOYState_TypeDef state)
     CdcDemo.select |= 0x80;
   }
 }
+*/
 
 /**
   * @brief  Demo_Application 
@@ -234,20 +191,20 @@ void CDC_SendFile_ProbeKey(JOYState_TypeDef state)
   * @retval None
   */
 
-static void SendFileMenu_Init(void)
-{
-  BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-  BSP_LCD_DisplayStringAtLine(14,
-                              (uint8_t *)
-                              "                                           ");
-  BSP_LCD_DisplayStringAtLine(15,
-                              (uint8_t *)
-                              "[User Key] to switch menu                  ");
-  BSP_LCD_DisplayStringAtLine(16,
-                              (uint8_t *)
-                              "[Joystick Up/Down] to change settings items");
-  CDC_ChangeSelectMode(CDC_SELECT_FILE);
-}
+//static void SendFileMenu_Init(void)
+//{
+//  BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+//  BSP_LCD_DisplayStringAtLine(14,
+//                              (uint8_t *)
+//                              "                                           ");
+//  BSP_LCD_DisplayStringAtLine(15,
+//                              (uint8_t *)
+//                              "[User Key] to switch menu                  ");
+//  BSP_LCD_DisplayStringAtLine(16,
+//                              (uint8_t *)
+//                              "[Joystick Up/Down] to change settings items");
+//  CDC_ChangeSelectMode(CDC_SELECT_FILE);
+//}
 
 /**
   * @brief  Returns from Send Menu 
@@ -260,8 +217,8 @@ static void ReturnFromSendMenu(void)
   CdcDemo.select = 0;
 
   /* Restore main menu */
-  LCD_ClearTextZone();
-  LCD_LOG_UpdateDisplay();
+//  LCD_ClearTextZone();
+//  LCD_LOG_UpdateDisplay();
   Menu_Init();
 }
 
@@ -272,32 +229,32 @@ static void ReturnFromSendMenu(void)
   */
 static void CDC_SendFile(uint8_t fileidx)
 {
-  uint32_t bytesread;
+//  uint32_t bytesread;
 
-  if (FileList.ptr > 0)
-  {
-    /* Close any opened file */
-    f_close(&MyFile);
-
-    if (f_open
-        (&MyFile, (char *)FileList.file[fileidx].name,
-         FA_OPEN_EXISTING | FA_READ) == FR_OK)
-    {
-      /* Fill the buffer to Send */
-      f_read(&MyFile, CDC_TX_Buffer, TX_BUFF_SIZE, (void *)&bytesread);
-
-      /* Send File */
-      USBH_CDC_Transmit(&hUSBHost, CDC_TX_Buffer, bytesread);
-    }
-    else
-    {
-      LCD_ErrLog("Cannot open %s file\n", FileList.file[0].name);
-    }
-  }
-  else
-  {
-    LCD_ErrLog("No file on the microSD\n");
-  }
+//  if (FileList.ptr > 0)
+//  {
+//    /* Close any opened file */
+//    f_close(&MyFile);
+//
+//    if (f_open
+//        (&MyFile, (char *)FileList.file[fileidx].name,
+//         FA_OPEN_EXISTING | FA_READ) == FR_OK)
+//    {
+//      /* Fill the buffer to Send */
+//      f_read(&MyFile, CDC_TX_Buffer, TX_BUFF_SIZE, (void *)&bytesread);
+//
+//      /* Send File */
+//      USBH_CDC_Transmit(&hUSBHost, CDC_TX_Buffer, bytesread);
+//    }
+//    else
+//    {
+//      LCD_ErrLog("Cannot open %s file\n", FileList.file[0].name);
+//    }
+//  }
+//  else
+//  {
+//    LCD_ErrLog("No file on the microSD\n");
+//  }
 }
 
 /**
@@ -307,26 +264,26 @@ static void CDC_SendFile(uint8_t fileidx)
   */
 static void CDC_ShowFiles(uint8_t offset, uint8_t select)
 {
-  uint8_t i = 0;
-
-  if (offset < FileList.ptr)
-  {
-    BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-    for (i = 4; i < 14; i++)
-    {
-      BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
-      BSP_LCD_DisplayStringAtLine(i, BLANK_LINE);
-
-      if ((i - 4) < FileList.ptr - offset)
-      {
-        if (i == (select + 4))
-        {
-          BSP_LCD_SetBackColor(LCD_COLOR_MAGENTA);
-        }
-        BSP_LCD_DisplayStringAtLine(i, FileList.file[i - 4 + offset].name);
-      }
-    }
-  }
+//  uint8_t i = 0;
+//
+//  if (offset < FileList.ptr)
+//  {
+//    BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+//    for (i = 4; i < 14; i++)
+//    {
+//      BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
+//      BSP_LCD_DisplayStringAtLine(i, BLANK_LINE);
+//
+//      if ((i - 4) < FileList.ptr - offset)
+//      {
+//        if (i == (select + 4))
+//        {
+//          BSP_LCD_SetBackColor(LCD_COLOR_MAGENTA);
+//        }
+//        BSP_LCD_DisplayStringAtLine(i, FileList.file[i - 4 + offset].name);
+//      }
+//    }
+//  }
 }
 
 /**
@@ -336,28 +293,28 @@ static void CDC_ShowFiles(uint8_t offset, uint8_t select)
   */
 void USBH_CDC_TransmitCallback(USBH_HandleTypeDef * phost)
 {
-  uint32_t bytesread;
-
-  if (use_file == 1)
-  {
-if (MyFile.fptr >= f_size(& MyFile))
-    {
-      f_close(&MyFile);
-      LCD_DbgLog(">> File sent\n");
-      use_file = 0;
-    }
-    else
-    {
-      /* Fill the buffer to Send */
-      f_read(&MyFile, CDC_TX_Buffer, TX_BUFF_SIZE, (void *)&bytesread);
-      /* Send File */
-      USBH_CDC_Transmit(&hUSBHost, CDC_TX_Buffer, bytesread);
-    }
-  }
-  else
-  {
-    LCD_DbgLog(">> Data sent\n");
-  }
+//  uint32_t bytesread;
+//
+//  if (use_file == 1)
+//  {
+//    if (MyFile.fptr >= f_size(& MyFile))
+//    {
+//      f_close(&MyFile);
+//      LCD_DbgLog(">> File sent\n");
+//      use_file = 0;
+//    }
+//    else
+//    {
+//      /* Fill the buffer to Send */
+//      f_read(&MyFile, CDC_TX_Buffer, TX_BUFF_SIZE, (void *)&bytesread);
+//      /* Send File */
+//      USBH_CDC_Transmit(&hUSBHost, CDC_TX_Buffer, bytesread);
+//    }
+//  }
+//  else
+//  {
+//    LCD_DbgLog(">> Data sent\n");
+//  }
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

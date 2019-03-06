@@ -416,11 +416,6 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
-              <FileName>explorer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/explorer.c</FilePath>
-            </File>
-            <File>
               <FileName>usbh_conf.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/usbh_conf.c</FilePath>
@@ -454,6 +449,26 @@
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f4xx_hal_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f4xx_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\usbh_conf.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -568,97 +583,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Middlewares/FatFs/Core</GroupName>
-          <Files>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff_gen_drv.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/FatFs/Drivers</GroupName>
-          <Files>
-            <File>
-              <FileName>sd_diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/sd_diskio.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Utilities</GroupName>
-          <Files>
-            <File>
-              <FileName>lcd_log.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Utilities/Log/lcd_log.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/BSP/STM324x9I_EVAL</GroupName>
-          <Files>
-            <File>
-              <FileName>stm324x9i_eval_io.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_io.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_lcd.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Drivers/CMSIS</GroupName>
           <Files>
             <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/BSP/Components</GroupName>
-          <Files>
-            <File>
-              <FileName>stmpe1600.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/Components/stmpe1600/stmpe1600.c</FilePath>
-            </File>
-            <File>
-              <FileName>stmpe811.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/Components/stmpe811/stmpe811.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1097,11 +1027,6 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
-              <FileName>explorer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/explorer.c</FilePath>
-            </File>
-            <File>
               <FileName>usbh_conf.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/usbh_conf.c</FilePath>
@@ -1135,6 +1060,26 @@
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f4xx_hal_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f4xx_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\usbh_conf.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1249,97 +1194,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Middlewares/FatFs/Core</GroupName>
-          <Files>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff_gen_drv.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/FatFs/Drivers</GroupName>
-          <Files>
-            <File>
-              <FileName>sd_diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/sd_diskio.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Utilities</GroupName>
-          <Files>
-            <File>
-              <FileName>lcd_log.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Utilities/Log/lcd_log.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/BSP/STM324x9I_EVAL</GroupName>
-          <Files>
-            <File>
-              <FileName>stm324x9i_eval_io.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_io.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_lcd.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Drivers/CMSIS</GroupName>
           <Files>
             <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/BSP/Components</GroupName>
-          <Files>
-            <File>
-              <FileName>stmpe1600.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/Components/stmpe1600/stmpe1600.c</FilePath>
-            </File>
-            <File>
-              <FileName>stmpe811.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/Components/stmpe811/stmpe811.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1698,7 +1558,7 @@
               <MiscControls> </MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx,USE_STM324x9I_EVAL,USE_USB_HS,USE_USB_HS_IN_FS</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc;../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc;../../../../../../Middlewares/Third_Party/FatFs/src;../../../../../../Drivers/BSP/STM324x9I_EVAL;../../../../../../Utilities/Log</IncludePath>
+              <IncludePath>../Inc;../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc;../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1778,11 +1638,6 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
-              <FileName>explorer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/explorer.c</FilePath>
-            </File>
-            <File>
               <FileName>usbh_conf.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/usbh_conf.c</FilePath>
@@ -1816,6 +1671,26 @@
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f4xx_hal_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\stm32f4xx_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\usbh_conf.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1930,97 +1805,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Middlewares/FatFs/Core</GroupName>
-          <Files>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff_gen_drv.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/FatFs/Drivers</GroupName>
-          <Files>
-            <File>
-              <FileName>sd_diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/sd_diskio.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Utilities</GroupName>
-          <Files>
-            <File>
-              <FileName>lcd_log.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Utilities/Log/lcd_log.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/BSP/STM324x9I_EVAL</GroupName>
-          <Files>
-            <File>
-              <FileName>stm324x9i_eval_io.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_io.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm324x9i_eval_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/STM324x9I_EVAL/stm324x9i_eval_lcd.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Drivers/CMSIS</GroupName>
           <Files>
             <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Drivers/BSP/Components</GroupName>
-          <Files>
-            <File>
-              <FileName>stmpe1600.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/Components/stmpe1600/stmpe1600.c</FilePath>
-            </File>
-            <File>
-              <FileName>stmpe811.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/BSP/Components/stmpe811/stmpe811.c</FilePath>
             </File>
           </Files>
         </Group>
