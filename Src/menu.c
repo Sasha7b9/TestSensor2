@@ -94,7 +94,6 @@ void CDC_MenuProcess(void)
   case CDC_DEMO_SEND:
     if (Appli_state == APPLICATION_READY)
     {
-      CDC_Handle_Send_Menu();
     }
     else
     {
@@ -229,7 +228,7 @@ void CDC_ChangeSelectMode(CDC_DEMO_SelectMode select_mode)
   }
   else if (select_mode == CDC_SELECT_FILE)
   {
-    CDC_SelectItem(DEMO_SEND_menu, 0xFF);
+//    CDC_SelectItem(DEMO_SEND_menu, 0xFF);
     CdcSettingsState.select = 0;
   }
   else if (select_mode == CDC_SELECT_MENU)
@@ -242,7 +241,7 @@ void CDC_ChangeSelectMode(CDC_DEMO_SelectMode select_mode)
 
     if (CdcDemo.state == CDC_DEMO_SEND)
     {
-      CDC_SelectItem(DEMO_SEND_menu, 1);
+//      CDC_SelectItem(DEMO_SEND_menu, 1);
     }
   }
   CdcSelectMode = select_mode;

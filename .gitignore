@@ -1,5 +1,6 @@
 *.dbgconf
 *.scvd
+*.tmp
 JLink*.*
 
 MDK-ARM/STM324x9I-EVAL_USBH-HS-IN-FS/Exe/*

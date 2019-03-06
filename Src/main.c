@@ -1,31 +1,17 @@
 #include "main.h"
 
-/* Private typedef ----------------------------------------------------------- */
-/* Private define ------------------------------------------------------------ */
-/* Private macro ------------------------------------------------------------- */
-/* Private variables --------------------------------------------------------- */
 USBH_HandleTypeDef hUSBHost;
 CDC_ApplicationTypeDef Appli_state = APPLICATION_IDLE;
 
-/* Private function prototypes ----------------------------------------------- */
 static void SystemClock_Config(void);
 static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id);
 static void CDC_InitApplication(void);
 
-
 static int requestForReceive = 0;
-
 
 #define RX_BUFF_SIZE   0x400
 static uint8_t CDC_RX_Buffer[RX_BUFF_SIZE];
 
-/* Private functions --------------------------------------------------------- */
-
-/**
-  * @brief  Main program
-  * @param  None
-  * @retval None
-  */
 int main(void)
 {
   /* STM32F4xx HAL library initialization: - Configure the Flash prefetch,
@@ -67,50 +53,10 @@ int main(void)
   */
 static void CDC_InitApplication(void)
 {
-  /* Configure Key Button */
-//  BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
-
-  /* Configure Joystick in EXTI mode */
-//  BSP_JOY_Init(JOY_MODE_EXTI);
-
-  /* Configure LED1, LED2, LED3 and LED4 */
-//  BSP_LED_Init(LED1);
-//  BSP_LED_Init(LED2);
-//  BSP_LED_Init(LED3);
-//  BSP_LED_Init(LED4);
-
-  /* Initialize the LCD */
-//  BSP_LCD_Init();
-
-  /* LCD Layer Initialization */
-//  BSP_LCD_LayerDefaultInit(1, LCD_FB_START_ADDRESS);
-
-  /* Selects the LCD Layer */
-//  BSP_LCD_SelectLayer(1);
-
-  /* Enables the display */
-//  BSP_LCD_DisplayOn();
-
-  /* Initialize the LCD Log module */
-//  LCD_LOG_Init();
-
-#ifdef USE_USB_HS
-//  LCD_LOG_SetHeader((uint8_t *) " USB OTG HS CDC Host");
-#else
-//  LCD_LOG_SetHeader((uint8_t *) " USB OTG FS CDC Host");
-#endif
-
-//  LCD_UsrLog("USB Host library started.\n");
-
   /* Start CDC Interface */
   USBH_UsrLog("Starting CDC Demo");
 
   Menu_Init();
-  /* Initialize microSD */
-//  if (SD_StorageInit() == 0)
-//  {
-//    SD_StorageParse();
-//  }
 }
 
 /**

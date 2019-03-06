@@ -421,11 +421,6 @@
               <FilePath>../Src/usbh_conf.c</FilePath>
             </File>
             <File>
-              <FileName>cdc_send.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_send.c</FilePath>
-            </File>
-            <File>
               <FileName>cdc_receive.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/cdc_receive.c</FilePath>
@@ -1032,11 +1027,6 @@
               <FilePath>../Src/usbh_conf.c</FilePath>
             </File>
             <File>
-              <FileName>cdc_send.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_send.c</FilePath>
-            </File>
-            <File>
               <FileName>cdc_receive.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/cdc_receive.c</FilePath>
@@ -1641,11 +1631,6 @@
               <FileName>usbh_conf.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/usbh_conf.c</FilePath>
-            </File>
-            <File>
-              <FileName>cdc_send.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_send.c</FilePath>
             </File>
             <File>
               <FileName>cdc_receive.c</FileName>

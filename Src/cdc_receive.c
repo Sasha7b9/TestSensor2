@@ -21,7 +21,6 @@ uint16_t xPos, yLinePos;
 uint8_t CDC_RX_Buffer[RX_BUFF_SIZE];
 
 /* Private functions --------------------------------------------------------- */
-static void DumpReceivedData(void);
 static void ReturnFromReceiveMenu(void);
 
 /**
@@ -103,78 +102,3 @@ static void ReturnFromReceiveMenu(void)
 //  LCD_LOG_UpdateDisplay();
   Menu_Init();
 }
-
-/**
-  * @brief  CDC data receive callback.
-  * @param  phost: Host handle
-  * @retval None
-  */
-//void USBH_CDC_ReceiveCallback(USBH_HandleTypeDef * phost)
-//{
-//  DumpReceivedData();
-//  USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
-//}
-
-/**
-  * @brief  Displays recieved data
-  * @param  data: Keyboard data to be displayed
-  * @retval None
-  */
-static void DumpReceivedData(void)
-{
-  uint16_t size;
-  uint8_t *ptr = CDC_RX_Buffer;
-
-  size = USBH_CDC_GetLastReceivedDataSize(&hUSBHost);
-//  BSP_LCD_SetTextColor(LCD_COLOR_YELLOW);
-  while (size--)
-  {
-    if ((*ptr != '\n') && (*ptr != '\r'))
-    {
-      if (*ptr == '\t')
-      {
-//        BSP_LCD_DisplayChar(xPos, LINE(yLinePos), ' ');
-      }
-      else
-      {
-//        BSP_LCD_DisplayChar(xPos, LINE(yLinePos), *ptr);
-      }
-      xPos += 7;
-    }
-    else if (*ptr == '\n')
-    {
-      yLinePos++;
-      xPos = 0;
-    }
-
-    ptr++;
-
-//    if (xPos > (BSP_LCD_GetXSize() - 7))
-//    {
-//      xPos = 0;
-//      yLinePos++;
-//    }
-
-    if (yLinePos > 13)
-    {
-//      BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-//      BSP_LCD_DisplayStringAtLine(15,
-//                                  (uint8_t *)
-//                                  "Use [User Key] to see more data");
-      /* Key Button in polling */
-//      while (BSP_PB_GetState(BUTTON_KEY) != RESET)
-//      {
-//        /* Wait for User Input */
-//      }
-
-//      LCD_ClearTextZone();
-//      BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-//      BSP_LCD_DisplayStringAtLine(3, (uint8_t *) "Receiving data ...");
-//      BSP_LCD_SetTextColor(LCD_COLOR_YELLOW);
-      xPos = 0;
-      yLinePos = 4;
-    }
-  }
-}
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
