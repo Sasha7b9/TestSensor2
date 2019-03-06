@@ -5,7 +5,6 @@ CDC_ApplicationTypeDef Appli_state = APPLICATION_IDLE;
 
 static void SystemClock_Config(void);
 static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id);
-static void CDC_InitApplication(void);
 
 static int requestForReceive = 0;
 
@@ -22,9 +21,6 @@ int main(void)
 
   /* Configure the system clock to 168 MHz */
   SystemClock_Config();
-
-  /* Init CDC Application */
-  CDC_InitApplication();
 
   /* Init Host Library */
   USBH_Init(&hUSBHost, USBH_UserProcess, 0);
@@ -44,19 +40,6 @@ int main(void)
     /* CDC Menu Process */
     //CDC_MenuProcess();
   }
-}
-
-/**
-  * @brief  CDC application Init.
-  * @param  None
-  * @retval None
-  */
-static void CDC_InitApplication(void)
-{
-  /* Start CDC Interface */
-  USBH_UsrLog("Starting CDC Demo");
-
-  Menu_Init();
 }
 
 /**
@@ -81,7 +64,6 @@ static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id)
     break;
 
   case HOST_USER_CLASS_ACTIVE:
-    GetDefaultConfiguration();
     Appli_state = APPLICATION_READY;
   
     if(requestForReceive == 0)

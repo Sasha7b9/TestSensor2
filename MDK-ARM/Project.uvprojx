@@ -421,21 +421,6 @@
               <FilePath>../Src/usbh_conf.c</FilePath>
             </File>
             <File>
-              <FileName>cdc_receive.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_receive.c</FilePath>
-            </File>
-            <File>
-              <FileName>cdc_configuration.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_configuration.c</FilePath>
-            </File>
-            <File>
-              <FileName>menu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/menu.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -1027,21 +1012,6 @@
               <FilePath>../Src/usbh_conf.c</FilePath>
             </File>
             <File>
-              <FileName>cdc_receive.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_receive.c</FilePath>
-            </File>
-            <File>
-              <FileName>cdc_configuration.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_configuration.c</FilePath>
-            </File>
-            <File>
-              <FileName>menu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/menu.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -1631,21 +1601,6 @@
               <FileName>usbh_conf.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/usbh_conf.c</FilePath>
-            </File>
-            <File>
-              <FileName>cdc_receive.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_receive.c</FilePath>
-            </File>
-            <File>
-              <FileName>cdc_configuration.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/cdc_configuration.c</FilePath>
-            </File>
-            <File>
-              <FileName>menu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/menu.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>

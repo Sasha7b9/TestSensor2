@@ -97,19 +97,13 @@ extern CDC_ApplicationTypeDef Appli_state;
 extern uint8_t *DEMO_CONFIGURATION_menu[];
 extern CDC_DEMO_SelectMode CdcSelectMode;
 extern CDC_DEMO_SETTING_StateMachine CdcSettingsState;
-extern CDC_DEMO_StateMachine CdcDemo;
 extern uint8_t PrevSelect;
 
 void Toggle_Leds(void);
-void Menu_Init(void);
-void CDC_SelectItem(uint8_t **menu, uint8_t item);
-void CDC_Handle_Receive_Menu(void);
 void CDC_Handle_Configuration_Menu(void);
 void CDC_ChangeSelectMode(CDC_DEMO_SelectMode select_mode);
 void CDC_AdjustSettingMenu(void);
-void CDC_SelectItem(uint8_t **menu, uint8_t item);
 void CDC_ChangeSelectMode(CDC_DEMO_SelectMode select_mode);
 void CDC_SelectSettingsItem(uint8_t item);
 void CDC_MenuProcess(void);
-void GetDefaultConfiguration(void);
 #endif /* __MAIN_H */
