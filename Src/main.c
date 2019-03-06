@@ -12,6 +12,13 @@ static void SystemClock_Config(void);
 static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id);
 static void CDC_InitApplication(void);
 
+
+static int requestForReceive = 0;
+
+
+#define RX_BUFF_SIZE   0x400
+static uint8_t CDC_RX_Buffer[RX_BUFF_SIZE];
+
 /* Private functions --------------------------------------------------------- */
 
 /**
@@ -49,7 +56,7 @@ int main(void)
     USBH_Process(&hUSBHost);
 
     /* CDC Menu Process */
-    CDC_MenuProcess();
+    //CDC_MenuProcess();
   }
 }
 
@@ -122,11 +129,22 @@ static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id)
   case HOST_USER_DISCONNECTION:
     Appli_state = APPLICATION_DISCONNECT;
 
+    USBH_CDC_Stop(&hUSBHost);
+    requestForReceive = 0;
+  
     break;
 
   case HOST_USER_CLASS_ACTIVE:
     GetDefaultConfiguration();
     Appli_state = APPLICATION_READY;
+  
+    if(requestForReceive == 0)
+    {
+        memset(CDC_RX_Buffer, 0, RX_BUFF_SIZE);
+        USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
+        requestForReceive = 1;
+    }
+  
     break;
 
   case HOST_USER_CONNECTION:
@@ -136,6 +154,24 @@ static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id)
   default:
     break;
   }
+}
+
+static void DumpReceivedData(void)
+{
+    volatile uint16_t size = USBH_CDC_GetLastReceivedDataSize(&hUSBHost);
+    
+    volatile uint8_t *buffer = CDC_RX_Buffer;
+    
+    buffer[0] = buffer[0];
+    
+    size = size;
+}
+
+
+void USBH_CDC_ReceiveCallback(USBH_HandleTypeDef * phost)
+{
+  DumpReceivedData();
+  USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
 }
 
 /**

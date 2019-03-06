@@ -109,11 +109,11 @@ static void ReturnFromReceiveMenu(void)
   * @param  phost: Host handle
   * @retval None
   */
-void USBH_CDC_ReceiveCallback(USBH_HandleTypeDef * phost)
-{
-  DumpReceivedData();
-  USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
-}
+//void USBH_CDC_ReceiveCallback(USBH_HandleTypeDef * phost)
+//{
+//  DumpReceivedData();
+//  USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
+//}
 
 /**
   * @brief  Displays recieved data
