@@ -36,9 +36,6 @@ int main(void)
   {
     /* USB Host Background task */
     USBH_Process(&hUSBHost);
-
-    /* CDC Menu Process */
-    //CDC_MenuProcess();
   }
 }
 
@@ -100,25 +97,6 @@ void USBH_CDC_ReceiveCallback(USBH_HandleTypeDef * phost)
 {
   DumpReceivedData();
   USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
-}
-
-/**
-  * @brief  Toggles LEDs to show user input state.
-  * @param  None
-  * @retval None
-  */
-void Toggle_Leds(void)
-{
-  static uint32_t ticks;
-
-  if (ticks++ == 100)
-  {
-//    BSP_LED_Toggle(LED1);
-//    BSP_LED_Toggle(LED2);
-//    BSP_LED_Toggle(LED3);
-//    BSP_LED_Toggle(LED4);
-    ticks = 0;
-  }
 }
 
 /**
