@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 USBH_HandleTypeDef hUSBHost;
 CDC_ApplicationTypeDef Appli_state = APPLICATION_IDLE;
 
