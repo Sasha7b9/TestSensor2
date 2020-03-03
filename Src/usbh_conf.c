@@ -4,97 +4,25 @@
 
 HCD_HandleTypeDef hhcd;
 
-/*******************************************************************************
-                       HCD BSP Routines
-*******************************************************************************/
-/**
-  * @brief  Initializes the HCD MSP.
-  * @param  hhcd: HCD handle
-  * @retval None
-  */
-void HAL_HCD_MspInit(HCD_HandleTypeDef * hhcd)
-{
-    GPIO_InitTypeDef GPIO_InitStruct;
 
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-
-    GPIO_InitStruct.Pin = (GPIO_PIN_9 | GPIO_PIN_11 | GPIO_PIN_12);
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-    __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
-
-    HAL_NVIC_SetPriority(OTG_FS_IRQn, 5, 0);
-
-    HAL_NVIC_EnableIRQ(OTG_FS_IRQn);
-}
-
-/**
-  * @brief  DeInitializes the HCD MSP.
-  * @param  hhcd: HCD handle
-  * @retval None
-  */
-void HAL_HCD_MspDeInit(HCD_HandleTypeDef * hhcd)
-{
-  if (hhcd->Instance == USB_OTG_FS)
-  {
-    __HAL_RCC_USB_OTG_FS_CLK_DISABLE();
-
-  }
-  else if (hhcd->Instance == USB_OTG_HS)
-  {
-    /* Disable USB HS Clocks */
-    __HAL_RCC_USB_OTG_HS_CLK_DISABLE();
-    __HAL_RCC_USB_OTG_HS_ULPI_CLK_DISABLE();
-
-  }
-}
-
-/*******************************************************************************
-                       LL Driver Callbacks (HCD -> USB Host Library)
-*******************************************************************************/
-
-/**
-  * @brief  SOF callback.
-  * @param  hhcd: HCD handle
-  * @retval None
-  */
 void HAL_HCD_SOF_Callback(HCD_HandleTypeDef * hhcd)
 {
   USBH_LL_IncTimer(hhcd->pData);
 }
 
-/**
-  * @brief  Connect callback.
-  * @param  hhcd: HCD handle
-  * @retval None
-  */
+
 void HAL_HCD_Connect_Callback(HCD_HandleTypeDef * hhcd)
 {
   USBH_LL_Connect(hhcd->pData);
 }
 
-/**
-  * @brief  Disconnect callback.
-  * @param  hhcd: HCD handle
-  * @retval None
-  */
+
 void HAL_HCD_Disconnect_Callback(HCD_HandleTypeDef * hhcd)
 {
   USBH_LL_Disconnect(hhcd->pData);
 }
 
 
-/**
-  * @brief  Notify URB state change callback.
-  * @param  hhcd: HCD handle
-  * @param  chnum: Channel number 
-  * @param  urb_state: URB State
-  * @retval None
-  */
 void HAL_HCD_HC_NotifyURBChange_Callback(HCD_HandleTypeDef * hhcd,
                                          uint8_t chnum,
                                          HCD_URBStateTypeDef urb_state)
@@ -102,15 +30,7 @@ void HAL_HCD_HC_NotifyURBChange_Callback(HCD_HandleTypeDef * hhcd,
   /* To be used with OS to sync URB state with the global state machine */
 }
 
-/*******************************************************************************
-                       LL Driver Interface (USB Host Library --> HCD)
-*******************************************************************************/
 
-/**
-  * @brief  Initializes the Low Level portion of the Host driver.
-  * @param  phost: Host handle
-  * @retval USBH Status
-  */
 USBH_StatusTypeDef USBH_LL_Init(USBH_HandleTypeDef * phost)
 {
     /* Set the LL driver parameters */
