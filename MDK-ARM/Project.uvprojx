@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>STM32F429NIHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.13.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.14.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000-0x81FFFFF) IRAM(0x20000000-0x2002FFFF) IRAM2(0x10000000-0x1000FFFF) CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -393,22 +393,22 @@
             <File>
               <FileName>usbh_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_ioreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_pipes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</FilePath>
             </File>
             <File>
               <FileName>usbh_ctlreq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_ioreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_pipes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_pipes.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -476,109 +476,34 @@
           <GroupName>Drivers/STM32F4xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>stm32f4xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_sdmmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_usb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma2d.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_i2c_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_fmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_ltdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_hcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hcd.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_i2c.c</FileName>
+              <FileName>stm32f4xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_sdram.c</FileName>
+              <FileName>stm32f4xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_usb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -588,7 +513,7 @@
             <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -608,7 +533,7 @@
             <File>
               <FileName>usbh_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Class\CDC\Src\usbh_cdc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -627,8 +552,8 @@
         <TargetCommonOption>
           <Device>STM32F429NIHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.13.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.14.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000-0x81FFFFF) IRAM(0x20000000-0x2002FFFF) IRAM2(0x10000000-0x1000FFFF) CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -1004,22 +929,22 @@
             <File>
               <FileName>usbh_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_ioreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_pipes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</FilePath>
             </File>
             <File>
               <FileName>usbh_ctlreq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_ioreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_pipes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_pipes.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1087,109 +1012,34 @@
           <GroupName>Drivers/STM32F4xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>stm32f4xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_sdmmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_usb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma2d.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_i2c_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_fmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_ltdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_hcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hcd.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_i2c.c</FileName>
+              <FileName>stm32f4xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_sdram.c</FileName>
+              <FileName>stm32f4xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_usb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1199,7 +1049,7 @@
             <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1219,7 +1069,7 @@
             <File>
               <FileName>usbh_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Class\CDC\Src\usbh_cdc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1238,8 +1088,8 @@
         <TargetCommonOption>
           <Device>STM32F437ZITx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.13.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.14.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00030000) IRAM2(0x10000000,0x00010000) IROM(0x08000000,0x00200000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -1558,7 +1408,7 @@
               <MiscControls> </MiscControls>
               <Define>USE_HAL_DRIVER,STM32F437xx,USE_USB_HS,USE_USB_HS_IN_FS</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../../../../../../Drivers/STM32F4xx_HAL_Driver/Inc;../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc;../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc</IncludePath>
+              <IncludePath>../Inc;../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Include;..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Inc;..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Inc;..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Class\CDC\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1615,22 +1465,22 @@
             <File>
               <FileName>usbh_core.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_ioreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_pipes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</FilePath>
             </File>
             <File>
               <FileName>usbh_ctlreq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ctlreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_ioreq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_ioreq.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_pipes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_pipes.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1698,109 +1548,34 @@
           <GroupName>Drivers/STM32F4xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>stm32f4xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_sdmmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_usb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma2d.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_i2c_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ll_fmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_dma_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_ltdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_hal_hcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_hcd.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_i2c.c</FileName>
+              <FileName>stm32f4xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hal_sdram.c</FileName>
+              <FileName>stm32f4xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_usb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_usb.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1810,7 +1585,7 @@
             <File>
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1830,7 +1605,7 @@
             <File>
               <FileName>usbh_cdc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c</FilePath>
+              <FilePath>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Class\CDC\Src\usbh_cdc.c</FilePath>
             </File>
           </Files>
         </Group>
