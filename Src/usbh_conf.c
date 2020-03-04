@@ -17,14 +17,14 @@ void HAL_HCD_MspInit(HCD_HandleTypeDef * hhcd)
     GPIO_InitTypeDef GPIO_InitStruct;
 
     /* Configure USB FS GPIOs */
-    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
 
-    GPIO_InitStruct.Pin = (GPIO_PIN_9 | GPIO_PIN_11 | GPIO_PIN_12);
+    GPIO_InitStruct.Pin = (GPIO_PIN_14 | GPIO_PIN_15);
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+    GPIO_InitStruct.Alternate = GPIO_AF12_OTG_HS_FS;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 //    GPIO_InitStruct.Pin = GPIO_PIN_10;
 //    GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
@@ -37,12 +37,15 @@ void HAL_HCD_MspInit(HCD_HandleTypeDef * hhcd)
 
     /* Enable USB FS Clocks */
     __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
+    __HAL_RCC_USB_OTG_HS_CLK_ENABLE();
 
     /* Set USBFS Interrupt to the lowest priority */
     HAL_NVIC_SetPriority(OTG_FS_IRQn, 5, 0);
+    HAL_NVIC_SetPriority(OTG_HS_IRQn, 5, 0);
 
     /* Enable USBFS Interrupt */
     HAL_NVIC_EnableIRQ(OTG_FS_IRQn);
+    HAL_NVIC_EnableIRQ(OTG_HS_IRQn);
 }
 
 /**
@@ -128,8 +131,8 @@ void HAL_HCD_HC_NotifyURBChange_Callback(HCD_HandleTypeDef * hhcd,
 USBH_StatusTypeDef USBH_LL_Init(USBH_HandleTypeDef * phost)
 {
     /* Set the LL driver parameters */
-    hhcd.Instance = USB_OTG_FS;
-    hhcd.Init.Host_channels = 11;
+    hhcd.Instance = USB_OTG_HS;
+    hhcd.Init.Host_channels = 12;
     hhcd.Init.dma_enable = 0;
     hhcd.Init.low_power_enable = 0;
     hhcd.Init.phy_itface = HCD_PHY_EMBEDDED;

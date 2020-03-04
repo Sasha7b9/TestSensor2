@@ -157,6 +157,12 @@ void OTG_FS_IRQHandler(void)
   HAL_HCD_IRQHandler(&hhcd);
 }
 
+
+void OTG_HS_IRQHandler(void)
+{
+  HAL_HCD_IRQHandler(&hhcd);
+}
+
 /**
   * @brief  This function handles DMA2 Stream 3 interrupt request.
   * @param  None
