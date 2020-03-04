@@ -26,25 +26,13 @@ void HAL_HCD_MspInit(HCD_HandleTypeDef * hhcd)
     GPIO_InitStruct.Alternate = GPIO_AF12_OTG_HS_FS;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-//    GPIO_InitStruct.Pin = GPIO_PIN_10;
-//    GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
-//    GPIO_InitStruct.Pull = GPIO_PULLUP;
-//    GPIO_InitStruct.Alternate = GPIO_AF10_OTG_FS;
-//    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-    /* Configure POWER_SWITCH IO pin */
-//  BSP_IO_ConfigPin(OTG_FS1_POWER_SWITCH_PIN, IO_MODE_OUTPUT);
-
     /* Enable USB FS Clocks */
-    __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
     __HAL_RCC_USB_OTG_HS_CLK_ENABLE();
 
     /* Set USBFS Interrupt to the lowest priority */
-    HAL_NVIC_SetPriority(OTG_FS_IRQn, 5, 0);
     HAL_NVIC_SetPriority(OTG_HS_IRQn, 5, 0);
 
     /* Enable USBFS Interrupt */
-    HAL_NVIC_EnableIRQ(OTG_FS_IRQn);
     HAL_NVIC_EnableIRQ(OTG_HS_IRQn);
 }
 
@@ -55,19 +43,6 @@ void HAL_HCD_MspInit(HCD_HandleTypeDef * hhcd)
   */
 void HAL_HCD_MspDeInit(HCD_HandleTypeDef * hhcd)
 {
-  if (hhcd->Instance == USB_OTG_FS)
-  {
-    /* Disable USB FS Clocks */
-    __HAL_RCC_USB_OTG_FS_CLK_DISABLE();
-
-  }
-  else if (hhcd->Instance == USB_OTG_HS)
-  {
-    /* Disable USB HS Clocks */
-    __HAL_RCC_USB_OTG_HS_CLK_DISABLE();
-    __HAL_RCC_USB_OTG_HS_ULPI_CLK_DISABLE();
-
-  }
 }
 
 /*******************************************************************************
@@ -132,7 +107,7 @@ USBH_StatusTypeDef USBH_LL_Init(USBH_HandleTypeDef * phost)
 {
     /* Set the LL driver parameters */
     hhcd.Instance = USB_OTG_HS;
-    hhcd.Init.Host_channels = 12;
+    hhcd.Init.Host_channels = 11;
     hhcd.Init.dma_enable = 0;
     hhcd.Init.low_power_enable = 0;
     hhcd.Init.phy_itface = HCD_PHY_EMBEDDED;

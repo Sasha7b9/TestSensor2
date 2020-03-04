@@ -162,7 +162,39 @@
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>139</LineNumber>
+          <LineNumber>517</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>539</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>138</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
           <ByteObject>0</ByteObject>
@@ -172,22 +204,6 @@
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
           <Filename>../Src/main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>157</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>../Src/stm32f4xx_it.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
@@ -384,7 +400,39 @@
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>139</LineNumber>
+          <LineNumber>517</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>539</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>138</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
           <ByteObject>0</ByteObject>
@@ -394,22 +442,6 @@
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
           <Filename>../Src/main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>157</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>../Src/stm32f4xx_it.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
@@ -577,6 +609,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
+          <Name>/</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -598,41 +631,57 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>143</LineNumber>
+          <LineNumber>517</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134235046</Address>
+          <Address>134234316</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Src/main.c</Filename>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../Src/main.c\143</Expression>
+          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../STM32Cube_FW_F4_V1.21.0/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c\517</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>157</LineNumber>
+          <LineNumber>539</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134229986</Address>
+          <Address>134234350</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Src/stm32f4xx_it.c</Filename>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../Src/stm32f4xx_it.c\157</Expression>
+          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../STM32Cube_FW_F4_V1.21.0/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c\539</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>139</LineNumber>
+          <LineNumber>466</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134235034</Address>
+          <Address>134234206</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\STM32Cube_FW_F4_V1.21.0\Middlewares\ST\STM32_USB_Host_Library\Core\Src\usbh_core.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../STM32Cube_FW_F4_V1.21.0/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c\466</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>138</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134234942</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -641,7 +690,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../Src/main.c\139</Expression>
+          <Expression>\\STM324x9I_EVAL_USBH_HS_IN_FS\../Src/main.c\138</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>

@@ -152,12 +152,6 @@ void SysTick_Handler(void)
   * @param  None
   * @retval None
   */
-void OTG_FS_IRQHandler(void)
-{
-  HAL_HCD_IRQHandler(&hhcd);
-}
-
-
 void OTG_HS_IRQHandler(void)
 {
   HAL_HCD_IRQHandler(&hhcd);

@@ -149,9 +149,7 @@ static void USBH_UserProcess(USBH_HandleTypeDef * phost, uint8_t id)
 
   case HOST_USER_CONNECTION:
     Appli_state = APPLICATION_START;
-        memset(CDC_RX_Buffer, 0, RX_BUFF_SIZE);
-        USBH_CDC_Receive(&hUSBHost, CDC_RX_Buffer, RX_BUFF_SIZE);
-        requestForReceive = 1;
+    phost->gState = HOST_DEV_ATTACHED;
     break;
 
   default:
